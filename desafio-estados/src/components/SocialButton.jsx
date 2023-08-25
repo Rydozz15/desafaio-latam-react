@@ -1,9 +1,9 @@
-SocialButton = () =>{
+const SocialButton = () =>{
     return (
         <div className="social-button-container">
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-github"></i>
-            <i class="bi bi-linkedin"></i>
+            <i className="bi bi-facebook"></i>
+            <i className="bi bi-github"></i>
+            <i className="bi bi-linkedin"></i>
         </div>
     )
 }
