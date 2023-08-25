@@ -6,7 +6,7 @@ const Registro = () =>{
     return (
         <section>
             <h1>Crea una cuenta</h1>
-            <SocialButton></SocialButton>
+            <SocialButton redA="facebook" redB="github" redC="linkedin-in"></SocialButton>
             <p>o usa tu mail para registrarte</p>
             <Formulario></Formulario>
             <Alert></Alert>

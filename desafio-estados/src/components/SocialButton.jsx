@@ -1,9 +1,9 @@
 const SocialButton = (redA,redB,redC) =>{
     return (
         <div className="social-button-container">
-            <i className={"bi bi-"+{redA}}></i>
-            <i className={"bi bi-"+{redB}}></i>
-            <i className={"bi bi-"+{redC}}></i>
+            <i className={"fa-brands fa-"+{redA}}></i>
+            <i className={"fa-brands fa-"+{redB}}></i>
+            <i className={"fa-brands fa-"+{redC}}></i>
         </div>
     )
 }
