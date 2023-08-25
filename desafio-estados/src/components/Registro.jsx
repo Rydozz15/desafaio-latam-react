@@ -4,13 +4,13 @@ import Alert from "./Alert"
 
 const Registro = () =>{
     return (
-<section>
-    <h1>Crea una cuenta</h1>
-    <SocialButton></SocialButton>
-    <p>o usa tu mail para registrarte</p>
-    <Formulario></Formulario>
-    <Alert></Alert>
-</section>
+        <section>
+            <h1>Crea una cuenta</h1>
+            <SocialButton></SocialButton>
+            <p>o usa tu mail para registrarte</p>
+            <Formulario></Formulario>
+            <Alert></Alert>
+        </section>
     )
 }
 export default Registro
