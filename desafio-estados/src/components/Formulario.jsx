@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Formulario = () => {
     //Estados del formulario
     const [nombre, setNombre] = useState('');
@@ -5,9 +7,22 @@ const Formulario = () => {
     const [contrasena, setContrasena] = useState('');
     const [verif, setVerif] = useState('');
 
+    //Estado para los errores
+    const [error, setError] = useState(false);
+    //Función antes de enviar el formulario
+    const validarDatos = (e) => {
+        e.preventDefault();
+        //Validación;
+        if (nombre === '' || email === '' || contrasena === '' || verif === ''){
+            setError(true);
+            return;
+        }
+        setError(false);
+    };
+
     return (
         <>
-            <form onSubmit={} className="formulario">
+            <form onSubmit={validarDatos} className="formulario">
                 <div className="form-group">
                     <input type="text" name="nombre" placeholder="Nombre" className="formControl" onChange={(e) => setNombre(e.target.value)} value={nombre}/>
                     <input type="email" name="email" placeholder="tumail@ejemplo.com" className="formControl" onChange={(e) => setEmail(e.target.value)} value={email}/>
