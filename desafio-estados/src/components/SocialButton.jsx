@@ -1,10 +1,12 @@
-const SocialButton = (redA,redB,redC) =>{
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+const SocialButton = ({red}) =>{
     return (
-        <div className="social-button-container">
-            <i className={"fa-brands fa-"+{redA}}></i>
-            <i className={"fa-brands fa-"+{redB}}></i>
-            <i className={"fa-brands fa-"+{redC}}></i>
-        </div>
+        <>
+            <div className="col">
+                <FontAwesomeIcon icon={red} size="3x"></FontAwesomeIcon>
+            </div>
+        </>
     )
 }
 export default SocialButton
