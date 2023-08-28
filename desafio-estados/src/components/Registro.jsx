@@ -3,9 +3,8 @@ import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import SocialButton from "./SocialButton" 
 import Formulario from "./Formulario"
-import Alert from "./Alert"
 
-const Registro = () =>{
+const Registro = ({errorMensaje}) =>{
     return (
         <section>
             <h1>Crea una cuenta</h1>
@@ -17,8 +16,7 @@ const Registro = () =>{
                 </div>
             </div>
             <p>o usa tu mail para registrarte</p>
-            <Formulario></Formulario>
-            <Alert></Alert>
+            <Formulario mensaje={errorMensaje}></Formulario>
         </section>
     )
 }
