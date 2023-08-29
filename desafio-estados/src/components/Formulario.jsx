@@ -34,13 +34,12 @@ const Formulario = ({mensaje}) => {
     };
     return (
         <>
-            <form onSubmit={validarDatos} className="formulario">
-                <input type="text" name="nombre" placeholder="Nombre" className="col-7" onChange={(e) => setNombre(e.target.value)} value={nombre}/>
-                <input type="email" name="email" placeholder="tumail@ejemplo.com" className="col-7" onChange={(e) => setEmail(e.target.value)} value={email}/>
-                <input type="password" name="contrasena" placeholder="Contraseña" className="col-7" onChange={(e) => setContrasena(e.target.value)} value={contrasena}/>
-                <input type="password" name="verificacion" placeholder="Confirma tu contraseña" className="col-7" onChange={(e) => setVerif(e.target.value)} value={verif}/>
-                <br />
-                <button type="submit" className="btn btn-secondary btn-lg btn-block">Registrar</button>
+            <form onSubmit={validarDatos} className="d-flex flex-column justify-content-center align-items-center">
+                <input type="text" name="nombre" placeholder="Nombre" className="rounded m-2" onChange={(e) => setNombre(e.target.value)} value={nombre}/>
+                <input type="email" name="email" placeholder="tumail@ejemplo.com" className="rounded m-2" onChange={(e) => setEmail(e.target.value)} value={email}/>
+                <input type="password" name="contrasena" placeholder="Contraseña" className="rounded m-2" onChange={(e) => setContrasena(e.target.value)} value={contrasena}/>
+                <input type="password" name="verificacion" placeholder="Confirma tu contraseña" className="rounded m-2" onChange={(e) => setVerif(e.target.value)} value={verif}/>
+                <button type="submit" className="btn btn-info btn-lg">Registrar</button>
             </form>
             <Alert mensaje={mensaje} errorInterno={errorInterno}></Alert>
         </>

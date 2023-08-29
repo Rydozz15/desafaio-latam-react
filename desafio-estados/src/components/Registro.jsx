@@ -6,8 +6,8 @@ import Formulario from "./Formulario"
 
 const Registro = ({errorMensaje}) =>{
     return (
-        <section>
-            <h1>Crea una cuenta</h1>
+        <section className="bg-light bg-gradient p-3 rounded">
+            <h1 className="p-3">Crea una cuenta</h1>
             <div className="container text-center">
                 <div className="row align-items-start">
                     <SocialButton red={faFacebook}></SocialButton>
@@ -15,7 +15,7 @@ const Registro = ({errorMensaje}) =>{
                     <SocialButton red={faGithub}></SocialButton>
                 </div>
             </div>
-            <p>o usa tu mail para registrarte</p>
+            <p className="fw-bold mt-2">o usa tu mail para registrarte</p>
             <Formulario mensaje={errorMensaje}></Formulario>
         </section>
     )

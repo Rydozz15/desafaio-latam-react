@@ -9,34 +9,6 @@ body{
   background: rgb(101,9,121);
   background: linear-gradient(90deg, rgba(101,9,121,0.9473039215686274) 35%, rgba(0,212,255,0.9501050420168067) 100%);
 }
-section{
-  background-color: whitesmoke;
-  padding: 1rem;
-  border-radius: 1rem;
-}
-h1{
-  padding: 1rem;
-}
-.formulario{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-input {
-  margin: 0.5rem;
-  border-radius: 0.3rem;
-}
 svg {
-  padding: 10px;
-  border: 2px black solid;
-  border-radius: 50%;
   cursor: pointer;
-}
-p{
-  margin: 1rem;
-  font-weight: bold;
-}
-.alert{
-  margin: 1rem 0;
 }
