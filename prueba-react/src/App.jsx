@@ -34,6 +34,7 @@ console.log(animeTop)
             <Card.Text>
                 {elementoAnime.synopsis}
             </Card.Text>
+            <Button variant='success' href={elementoAnime.url} target="_blank">KAKA</Button>
         </Card.Body>
       </Card>
       )
