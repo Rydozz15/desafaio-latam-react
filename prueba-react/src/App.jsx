@@ -27,6 +27,7 @@ console.log(animeTop)
       ? '' 
       : 
       animeTop.map(elementoAnime =>
+        //Hay que cambiar esto para que quede ordenado
         <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={elementoAnime.images.webp['image_url']} />
         <Card.Body>
