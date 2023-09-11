@@ -1,9 +1,8 @@
 import { useState,useEffect } from 'react';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import { Container,Row,Card,Button } from 'react-bootstrap';
 import MiApi from './components/MiApi'
 import Buscador from './components/Buscador';
-import { Container,Row } from 'react-bootstrap';
+import './App.css';
 
 function App() {
 const [animeTop, setAnimeTop] = useState([]);
