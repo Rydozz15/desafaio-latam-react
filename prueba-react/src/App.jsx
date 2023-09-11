@@ -9,7 +9,7 @@ function App() {
 const [animeTop, setAnimeTop] = useState([]);
 const[animeFiltered,setAnimeFiltered] = useState(animeTop)
 const [filterState,setFilterState] = useState('')
-console.log(filterState)
+
 useEffect(() => {
   animeFilter(filterState);
 },[filterState,animeTop]);
@@ -49,7 +49,7 @@ const animeFilter = (filterState) => {
 };
 
   return (
-    <>
+    <div className='d-flex flex-column align-items-center justify-content-center'>
       <Buscador setAnimeTop={setAnimeTop} setFilterState={setFilterState} ></Buscador>
       <MiApi setAnimeFiltered={setAnimeFiltered} animeTop={animeTop}></MiApi>
       <Container>
@@ -58,12 +58,12 @@ const animeFilter = (filterState) => {
           ? '' 
           : 
           animeFiltered.map(elementoAnime =>
-            <Card key={elementoAnime.title} style={{ width: '30%' }} className='col-4'>
+            <Card key={elementoAnime.title} className='col-2 m-3'>
             <Card.Img variant="top" src={elementoAnime.images.webp['image_url']} />
             <Card.Body>
                 <Card.Title>{elementoAnime.title}</Card.Title>
                 <Card.Text>
-                    {elementoAnime.synopsis}
+                    {elementoAnime.synopsis.substring(0,240)+"..."}
                 </Card.Text>
                 <Button variant='success' href={elementoAnime.url} target="_blank">More info.</Button>
             </Card.Body>
@@ -72,7 +72,7 @@ const animeFilter = (filterState) => {
         }
         </Row>
       </Container>
-    </>
+    </div>
     
   )
 }
