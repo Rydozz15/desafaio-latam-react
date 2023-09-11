@@ -1,42 +1,28 @@
-import React, { useEffect } from 'react';
+import { useEffect,useState } from 'react';
 import axios from 'axios';
 
-function MiApi({setAnimeRandom,setAnimeTop}) {
+function MiApi({setAnimeFiltered,animeTop}) {
 
-//1. Guardar los datos
-// GET with fetch API
 useEffect(() => {
-    fetchAnimeRandom();
     fetchAnimeTop();
-}, []);
-
-const fetchAnimeRandom = async () => {
-    const apiUrl = 'https://api.jikan.moe/v4/random/anime';
-    axios
-      .get(apiUrl)
-      .then((response) => {
-        setAnimeRandom(response.data.data);
-      })
-      .catch((err) => {
-        console.log("Error al obtener datos de la API:", err);
-      });
-  };
+}, [animeTop]);
 
 const fetchAnimeTop= async () => {
-const apiUrl = 'https://api.jikan.moe/v4/top/anime';
+  let apiUrl = ''
+  if(animeTop == [] || animeTop == undefined || animeTop == ''){
+    apiUrl += `https://api.jikan.moe/v4/top/anime`;
+  }else{
+    apiUrl += `https://api.jikan.moe/v4/anime?q=${animeTop}&sfw`;
+  }
 axios
     .get(apiUrl)
     .then((response) => {
-    setAnimeTop(response.data.data);
+    setAnimeFiltered(response.data.data);
     })
     .catch((err) => {
     console.log("Error al obtener datos de la API:", err);
     });
 };
-return (
-    <>
-    </>
-)
 }
 
 export default MiApi
