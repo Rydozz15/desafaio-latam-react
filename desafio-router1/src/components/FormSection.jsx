@@ -3,7 +3,7 @@ import { Button, Form } from "react-bootstrap";
 function FormSection() {
     return(
         <>
-            <Form className="d-flex flex-column justify-content-center">
+            <Form>
             <Form.Group className="d-flex flex-column align-items-center mb-3">
                 <Form.Label>Correo</Form.Label>
                 <Form.Control type="email" placeholder="nombre@ejemplo.com" />
